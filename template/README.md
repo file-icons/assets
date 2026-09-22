@@ -61,6 +61,30 @@ This example demonstrates the use of an HTML `<picture>` element to alternate be
 Note that this approach shouldn't be necessary if the icon's [`#auto`] view works as intended on GitHub (selecting the most appropriate colour-scheme based on the user's settings).
 
 
+Recommended usage
+-----------------
+Using the SVG's [`#auto`] view should be enough to keep the icon legible, irrespective of colour-scheme.
+
+<table><thead><tr><th>Preview</th><th align="left">Source code</th></tr></thead><tbody><tr><td width="32" align="center" valign="middle">
+
+<img src="icon.svg#auto" height="64" alt="&#xE000;"/>
+
+</td><td width="600" valign="middle">
+
+```html
+<a href="icon.svg?raw=1">
+	<img src="icon.svg#auto" alt="&#xE000;" height="64"/>
+</a>
+```
+</td></tr></tbody></table>
+
+If you don't need to set a `height` attribute (such as if the icon is displayed in a table cell with a fixed size), then regular markdown will suffice:
+
+```markdown
+![&#xE000;](icon.svg#auto)
+```
+
+
 <!-- Referenced links -->
 [dark mode]:   https://en.wikipedia.org/wiki/Dark_mode
 [SVG views]:   https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Element/view
